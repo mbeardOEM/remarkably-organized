@@ -26,6 +26,8 @@ html {
 
 	--panel: #ffffff; // default background color for raised panels/surfaces
 	--panel-low: #fafafa; // the de-emphasized state of 'panel' - like when disabled
+	--panel-low-2: #cccccc; // the de-emphasized state of 'panel' - like when disabled
+
 	--panel-high: #f2f2f2; // the emphasized state of 'panel' - like on hover or focus
 	--panel-text: #5e5e5e; // default text on the panel
 	--panel-text-low: #b3b3b3; // text on the panel in a de-emphasized state - like disabled or metadata
@@ -433,6 +435,6 @@ select {
 input[type='color'] {
 	width: 100%;
 	height: 2.5rem;
-	padding: 0.25rem .5rem;
+	padding: 0.25rem 0.5rem;
 	cursor: pointer;
 }

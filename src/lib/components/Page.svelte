@@ -12,6 +12,7 @@
 	import AgendaWeek from './AgendaWeek.svelte';
 	import AgendaDay from './AgendaDay.svelte';
 	import TaskProgress from './TaskProgress.svelte';
+	import WorkWeek from './WorkWeek.svelte';
 
 	let {
 		display = 'dotted' as Collection['type'],
@@ -47,6 +48,8 @@
 		<NotesYear
 			months={settings.months.filter((m) => m.year === timeframe.year)}
 			{settings} />
+	{:else if display === 'work-week'}
+		<WorkWeek {timeframe} {settings} />
 	{:else if display === 'tasklist-progress'}
 		<TaskProgress {timeframe} {settings} />
 	{:else if display === 'calendar-year'}
