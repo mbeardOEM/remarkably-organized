@@ -69,8 +69,8 @@
 <style lang="scss">
 	.week {
 		display: grid;
-		grid-template-columns: 3rem repeat(7, 1fr); /* First column for hour labels */
-		grid-template-rows: 2rem repeat(52, 1fr); /* 52 rows for 15-minute blocks from 6 AM to 6 PM */
+		grid-template-columns: 3rem repeat(7, 1fr);
+		grid-template-rows: 2rem repeat(52, 1fr);
 		width: 100%;
 		height: 100%;
 		justify-items: stretch;
@@ -88,11 +88,11 @@
 
 	/* Day header styling */
 	.day-header {
-		grid-row: 1; /* Keep header in the first row */
+		grid-row: 1;
 		text-align: center;
 		font-weight: bold;
 		padding: 0.5rem 0;
-		background-color: #f0f0f0;
+		background-color: var(--fg);
 		border-bottom: solid 1px var(--outline);
 		font-size: 0.9em;
 	}
@@ -104,7 +104,7 @@
 		font-weight: var(--font-weight-light);
 		font-size: 0.8em;
 		color: var(--text-low);
-		grid-row: span 4; /* Each hour label spans 4 rows to match 15-minute blocks */
+		grid-row: span 4;
 		padding-top: 0.3rem;
 		border-top: solid 1px var(--outline);
 		border-bottom: solid 1px var(--outline);
@@ -118,12 +118,11 @@
 	/* Styling for each 15-minute block */
 	.hour-block {
 		border: solid 1px var(--outline);
-		background-color: #ffffff;
 	}
 
 	/* Grey out blocks outside working hours */
 	.outside-working-hours {
-		background-color: var(--panel-low-2); /* Light grey for non-working hours */
+		background-color: var(--panel-low); /* Light grey for non-working hours */
 	}
 
 	/* Right border for the last day of the week */
